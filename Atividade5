@@ -1,0 +1,44 @@
+Base de dados: Escola
+
+ForeginKey(Fk): Alunos
+
+Aluno{
+Id - 201972
+Nome - Ansuman Subedi
+Idade - 15
+Turma - 11ºPI
+EE - Dipa baral subedi
+Murada - Rua das baleiras 13 , 3090-769 
+
+}
+
+ForeginKey(Fk): Professores
+
+Profressores{
+Id - 298374
+Nome - Paulo esteves
+Idade - 70 (Idade normal da prof da escola INTEP)
+Murada - Nao quero saber
+
+}
+
+
+ForeginKey(Fk): Funcionarios
+
+Funcionarios{
+Id - 092714
+Nome - Dona Joana (Unica funcionaria da escola que eu conheco)
+Idade - 40?
+Murada - Pergunta ela
+
+}
+
+ForeginKey(Fk): Cursos
+
+Cursos:{
+
+CursosCheios - Programador/a de Informática , Turismo
+CursosExistante - Turismo , Restaurante/Bar . Cozinha/Pastelaria , Organização de Eventos , Desporto , Mecatrónica Automóvel , Programador/a de Informática , Eletrónica, Automação e Computadores , Manutenção Industrial - Variante Mecatrónica , Informática - Instalação e Gestão de Redes , Esteticista , Cabeleireiro/a , CEF 9.º Ano Cuidador/a de Crianças e Jovens , CEF 8.º Ano Assistente de Cuidados de Beleza
+
+}
+
