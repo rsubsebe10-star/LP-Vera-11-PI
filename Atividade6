@@ -1,0 +1,11 @@
+Alunos:
+ {id_Aluno , nome , data_nascimento, morada , curso); PK
+
+Professores:
+ {id_Professores , nome , departamento , telefone; PK
+
+Funcionarios:
+ {id_Professores , nome , especialidade, telefone , email , id_Funcionarios); PK
+
+Cursos:
+ {id_Cursos , nome , carga_Horario); PK
