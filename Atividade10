@@ -18,6 +18,12 @@ Idade : 30
 Morada : Rua das baleiras 13
 Data de nascimento : 1995/2/6
 Bebe : Ansuman
+Medico associado : Pedro
 }
 
 
+Medico{
+Nome : Pedro
+Idade : 20
+
+}
