@@ -1,0 +1,16 @@
+CREATE DATABASE nepal;
+USE nepal;
+
+CREATE TABLE Cidades (
+CidadeID INT PRIMARY KEY NOT NULL,
+Nome_Cidade VARCHAR(50) NOT NULL,
+Codigo_Postal INT NOT NULL
+);
+
+SELECT * FROM cidades;
+SELECT CidadeID FROM cidades;
+
+INSERT INTO cidades 
+VALUES
+(1,"Pokhara",234880),
+(2,"Kathmandu",984590);
