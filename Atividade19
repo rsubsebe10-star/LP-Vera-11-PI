@@ -1,26 +1,17 @@
-
-USE portugal;
-
+-- 1 --
+USE portgual;
 -- 2 --
-RENAME TABLE cidades TO codigo_postal;
-
+ALTER TABLE portgual.cidades RENAME TO portgual.codigo_postal;
 -- 3 --
-SELECT * FROM codigo_postal;
-
+SELECT * FROM portgual.codigo_postal;
 -- 4 -- 
-ALTER TABLE area RENAME COLUMN area TO AreaKM2;
-
+ALTER TABLE  portgual.codigo_postal RENAME COLUMN area TO AreaKm2;
 -- 5 --
-SELECT AVG(AreaKM2) 
-AS MediaKM 
-FROM codigo_postal;
-
+SELECT AVG(AreaKm2) AS mediakm FROM portgual.codigo_postal;
 -- 6 --
-SELECT nome, codigo_postal 
-FROM codigo_postal 
-WHERE AreaKM2 > 20;
-
+SELECT nome, codigo_postal
+FROM codigo_postal
+WHERE AreaKm2 > 80;
 -- 7 --
-SELECT * 
-FROM codigo_postal 
-WHERE codigo_postal = 3090;
+ SELECT * FROM codigo_postal WHERE codigo_postal = 7830;
+ 
