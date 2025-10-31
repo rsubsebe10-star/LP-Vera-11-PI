@@ -1,0 +1,26 @@
+
+USE portugal;
+
+-- 2 --
+RENAME TABLE cidades TO codigo_postal;
+
+-- 3 --
+SELECT * FROM codigo_postal;
+
+-- 4 -- 
+ALTER TABLE area RENAME COLUMN area TO AreaKM2;
+
+-- 5 --
+SELECT AVG(AreaKM2) 
+AS MediaKM 
+FROM codigo_postal;
+
+-- 6 --
+SELECT nome, codigo_postal 
+FROM codigo_postal 
+WHERE AreaKM2 > 20;
+
+-- 7 --
+SELECT * 
+FROM codigo_postal 
+WHERE codigo_postal = 3090;
