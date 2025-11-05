@@ -1,0 +1,27 @@
+-- 1
+
+CREATE DATABASE Escola;
+USE Escola;
+
+-- 2
+
+CREATE TABLE Estudantes (
+	Id INT PRIMARY KEY,
+    Nome VARCHAR(20),
+    Idade INT,
+    Data_nascimento DATE
+);
+
+-- 3
+
+
+SELECT * FROM Estudantes;
+INSERT INTO Estudantes(Id , Nome , Idade , Data_nascimento)
+VALUES
+(1,"Ansuman",15,'2010-02-06'),
+(2,"Pritisha",16,'2009-01-31'),
+(3,"Joao",17,'2007-12-15'),
+(4,"Nigger",12,'2013-7-14'),
+(5,"Rodrigo",67,'1958-7-6')
+
+
