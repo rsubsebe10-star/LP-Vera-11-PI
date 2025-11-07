@@ -1,0 +1,59 @@
+Use Loja;
+
+CREATE TABLE clientes (
+	clienteID INT PRIMARY KEY,
+    Nome VARCHAR(20),
+    Contacto INT UNIQUE, 
+    Morada VARCHAR(30),
+    Criado_por_funcID INT,
+    FOREIGN KEY (Criado_por_funcID)
+		REFERENCES funcionario(funcionarioID)
+);
+CREATE TABLE funcionario (
+funcionarioID INT PRIMARY KEY,
+Nome VARCHAR(20),
+Morada VARCHAR(30),
+Contacto INT UNIQUE
+);
+
+SELECT * 
+FROM clientes,funcionario;
+
+INSERT INTO funcionario
+VALUES(1,'Maria','Rua das gugas',920220220),
+	  (2,'Jorge','Rua dos bros',920280354),
+      (3,'Helena','Rua das maes',920234020);
+
+INSERT INTO clientes
+VALUES(1,'ansuman',920290354,'Rua das niggers',1),
+	  (2,'miranda',920192019,'Rua dos pretos',3),
+      (3,'mendes',920220354,'Rua das ciganos',2);
+
+
+
+drop table clientes;
+drop table funcionario;
+
+SELECT *
+FROM clientes
+CROSS JOIN funcionario;
+
+SELECT *
+FROM clientes
+INNER JOIN funcionario ON Criado_por_funcID = funcionarioID;
+
+SELECT *
+FROM clientes
+LEFT JOIN funcionario ON Criado_por_funcID = funcionarioID;
+
+SELECT *
+FROM clientes
+RIGHT JOIN funcionario ON Criado_por_funcID = funcionarioID;
+
+INSERT INTO clientes
+VALUES(4,'Ansuman',920280354,'Rua das baleiras',1);
+
+INSERT INTO funcionario
+VALUES (4,'namsuam','Rua das negras',920192013);
+
+
