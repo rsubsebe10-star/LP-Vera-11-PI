@@ -1,0 +1,34 @@
+USE Loja;
+
+SELECT * FROM loja.produtos;
+
+SELECT sum(valor_unit) AS Total_€
+FROM produtos;
+
+SELECT COD_PROD_ID, sum(valor_unit) AS Total_€
+FROM produtos
+GROUP BY COD_PROD_ID;
+
+
+
+-- Contas quantes linhas existem 
+SELECT COUNT(desconto)
+FROM produtos;
+
+CREATE TABLE exemplo (
+	ID INT,
+    Desconto INT
+);
+
+INSERT INTO exemplo 
+VALUES (1 ,15) , (2,NULL) , (3,NULL);
+
+SELECT * FROM exemplo;
+SELECT COUNT(*) FROM exemplo;
+SELECT COUNT(desconto) FROM exemplo;
+
+SELECT MIN(id) FROM exemplo;
+SELECT MAX(id) FROM exemplo;
+
+
+
