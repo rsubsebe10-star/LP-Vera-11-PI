@@ -1,0 +1,80 @@
+-- pergunta 1 --
+
+CREATE DATABASE NorthWind;
+
+USE NorthWind;
+
+CREATE TABLE customers (
+	customerID INT,
+	companyname VARCHAR(20)
+
+);
+
+INSERT INTO customers (customerID,companyname)
+VALUES(1,"Ansuman"),
+	  (2,"Joao"),
+      (3,"Gustavo"),
+      (4,"Mendes"),
+      (5,"Aimar");
+      
+SELECT *
+FROM customers ORDER BY companyname ASC;
+
+-- pergunta 2 --
+
+ALTER TABLE customers
+ADD contactoName VARCHAR(50);
+ALTER TABLE customers
+ADD region VARCHAR(20);
+ALTER TABLE customers
+ADD country VARCHAR(50);
+
+DROP TABLE customers;
+
+-- INSERT INTO customers (contactoNAME,region,country);
+
+UPDATE customers 
+SET contactoName = "cntAnsuman" ,
+	region = "coimbra" ,
+    country = "portugal"
+WHERE customerID = 1;
+
+UPDATE customers 
+SET contactoName = "cntJoao" ,
+	region = "california" ,
+    country = "estados unidos"
+WHERE customerID = 2;
+
+UPDATE customers 
+SET contactoName = "cntGustavo" ,
+	region = "londres" ,
+    country = "reino unido"
+WHERE customerID = 3;
+
+UPDATE customers 
+SET contactoName = "cntMendes" ,
+	region = "rua do Putin" ,
+    country = "russia"
+WHERE customerID = 4;
+
+UPDATE customers 
+SET contactoName = "cntAimar" ,
+	region = "Sae paulo" ,
+    country = "Brazil"
+WHERE customerID = 5;
+
+SELECT * FROM customers ORDER BY region;
+
+SET SQL_SAFE_UPDATES = 0;
+
+-- Pergunta 3 -- 
+
+CREATE TABLE productos (
+	categoryID INT,
+    productoName VARCHAR(40),
+    productoID INT,
+    supplierID INT,
+    unitsinstock INT
+);
+
+
