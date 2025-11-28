@@ -6,16 +6,16 @@ USE NorthWind;
 
 CREATE TABLE customers (
 	customerID INT,
-	companyname VARCHAR(20)
+	companyname VARCHAR(30)
 
 );
 
 INSERT INTO customers (customerID,companyname)
-VALUES(1,"Ansuman"),
-	  (2,"Joao"),
-      (3,"Gustavo"),
-      (4,"Mendes"),
-      (5,"Aimar");
+VALUES(1,"Starlink"),
+	  (2,"McDonalds"),
+      (3,"Novo banco"),
+      (4,"NOS internet"),
+      (5,"BMW");
       
 SELECT *
 FROM customers ORDER BY companyname ASC;
@@ -63,18 +63,56 @@ SET contactoName = "cntAimar" ,
     country = "Brazil"
 WHERE customerID = 5;
 
-SELECT * FROM customers ORDER BY region;
+SELECT * FROM customers ORDER BY region ASC;
 
 SET SQL_SAFE_UPDATES = 0;
+
 
 -- Pergunta 3 -- 
 
 CREATE TABLE productos (
+	productoID INT PRIMARY KEY,
 	categoryID INT,
     productoName VARCHAR(40),
-    productoID INT,
     supplierID INT,
     unitsinstock INT
+    
 );
+DROP TABLE productos;
+
+SELECT productoName 
+FROM productos 
+WHERE categoryID = 1 AND unitsinstock > 0 
+ORDER BY unitsinstock DESC;
+
+INSERT INTO productos
+VALUES(1 ,  5 , "Oreo" , 10 , 100),
+	  (2 , 1 , "Jeans" , 20 , 20),
+      (3 , 5 , "Jacket" , 1 , 30);
+       
+       
+-- PERGUNTA 4 --
+
+CREATE TABLE encomendas(
+	orderID INT PRIMARY KEY,
+    quantity INT,
+    productoID INT,
+    FOREIGN KEY (productoID) REFERENCES productos(productoID)
+    
+);
+SELECT  productoID , quantity
+FROM encomendas
+WHERE orderID IN (10812,97283,67283);
+
+
+DROP TABLE ENCOMENDAS;
+
+SELECT productoID , quantity FROM encomendas;
+SELECT * FROM encomendas;
+
+INSERT INTO encomendas
+VALUES(10812 , 20 , 1 ),
+	  (97283 , 11 , 2),
+	  (67283 , 10 , 3)
 
 
